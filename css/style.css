@@ -1,3 +1,32 @@
+
+@font-face {
+  font-family: "Gilroy Extra Bold";
+  src: url("../fontsweb/gilroyextrabold.woff") format("woff"), url("../fontsweb/gilroyextrabold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy Light";
+  src: url("../fontsweb/gilroylight.woff") format("woff"), url("../fontsweb/gilroylight.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fontsweb/opensans.woff") format("woff"), url("../fontsweb/opensans.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans Light";
+  src: url("../fontsweb/opensanslight.woff") format("woff"), url("../fontsweb/opensanslight.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html,
 body {
 	margin: 0;
@@ -90,8 +119,37 @@ textarea[placeholder] {
   margin-right: 66px;
 }
 
-.main-navigation--user__item {
+.main-navigation--user__item a {
+  font-family: "Gilroy Extra Bold", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 3px;
+}
 
+.main-navigation--site li {
+  font-family: "Gilroy Extra Bold", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 3px;
+  text-transform: uppercase
+}
+
+.main-navigation--site__catalog {
+  padding-left: 20px;
+}
+
+.main-navigation--site__delivery {
+  padding-left: 325px;
+}
+
+.main-navigation--site__warrenty {
+  padding-left: 40px;
+}
+
+.main-navigation--site__contacts {
+  padding-left: 115px;
 }
 
 .dropdown-catalog {
@@ -173,11 +231,21 @@ input[type="radio"].visually-hidden {
   width: auto;
 }
 
+.item-opening-button {
+   font-family: "Gilroy Extra Bold", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 3px;
+  text-transform: uppercase
+}
+
 /* categories */
 
 .categories--list {
   display: flex;
   list-style: none;
+  justify-content: space-around;
 }
 
 .categories--list-item {
@@ -191,6 +259,14 @@ input[type="radio"].visually-hidden {
   background-color: #f7e296;
   background-image: url("./img/SVG/popular-1.svg");
   background-position: center;
+}
+
+.categories--list-item__img {
+  background-color: #f7e296;
+}
+
+.categories--list-item__title {
+  max-width: 162px;
 }
 
 /* Фильтры */

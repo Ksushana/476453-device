@@ -5,6 +5,7 @@
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    
   </head>
   <body>
     <div class="container">
@@ -33,7 +34,7 @@
           </li>
         </ul>
         <ul class="main-navigation--site">
-          <li>
+          <li class="main-navigation--site__catalog">
             <a class="inner-link inner-link-main" href="./catalog.html"><span>Каталог товаров</span></a>
             <div class="dropdown-catalog dropdown">
               <ul>
@@ -50,9 +51,9 @@
               </ul>
             </div>
            </li>
-          <li><a href="delovery.html">Доставка</a></li>
-          <li><a href="warrenty.html">Гарантия</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
+          <li class="main-navigation--site__delivery"><a href="delovery.html">Доставка</a></li>
+          <li class="main-navigation--site__warrenty"><a href="warrenty.html">Гарантия</a></li>
+          <li class="main-navigation--site__contacts"><a href="contacts.html">Контакты</a></li>
         </ul>
       </nav>
     </header>
@@ -72,7 +73,7 @@
               <div class="slide-info">
                 <h2 class="slider-header">Делай селфи, как Бен Стиллер!</h2>
                 <p class="slider-text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-                <a href="#">Подробнее</a>
+                <a href="#" class="item-opening-button">Подробнее</a>
                 <table>
                   <tr class="slider-table--first-line">
                    <td>8,5 м</td>
@@ -92,7 +93,7 @@
               <div class="slide-info">
                 <h2 class="slider-header">Худеем правильно!</h2>
                 <p class="slider-text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-                <a href="#">Подробнее</a>
+                <a href="#" class="item-opening-button">Подробнее</a>
                 <table>
                   <tr class="slider-table--first-line">
                    <td>48 часов</td>
@@ -108,7 +109,7 @@
               <div class="slide-info">
                 <h2 class="slider-header">Порхает как бабочка, жалит как пчела!</h2>
                 <p class="slider-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-                <a href="#">Подробнее</a>
+                <a href="#" class="item-opening-button">Подробнее</a>
                 <table>
                   <tr class="slider-table--first-line">
                    <td>800 м</td>
@@ -127,13 +128,67 @@
       <section class="categories">
         <ul class="categories--list">
           <li class="categories--list-item">
-            <a class="" href="virtreality.html">Виртуальная реальность</a>
+            <a class="href" href="catalog/virtualreality.html">
+              <div class="categories--list-item__img">
+                <img class="popular-img" src="img/svg/popular-1.svg" width="160" height="160" alt="Виртуальная реальность">
+              </div>
+            </a>
+            <h3 class="categories--list-item__title">
+              <a href="catalog.html">Виртуальная реальность</a>
+            </h3>
           </li>
-          <li class="categories--list-item"><a class="" href="monopods.html">Моноподы для селфи</a></li>
-          <li class="categories--list-item"><a class="" href="action.html">Экшн-камеры</a></li>
-          <li class="categories--list-item"><a class="" href="fitness.html">Фитнес-браслеты</a></li>
-          <li class="categories--list-item"><a class="" href="smartwatch.html">Умные часы</a></li>
-          <li class="categories--list-item"><a class="" href="cuadrocopters.html">Квадрокоптеры</a></li>
+          <li class="categories--list-item">
+            <a href="catalog/monopod.html">
+              <div class="categories--list-item__img">
+                <img class="popular-img" src="img/svg/popular-2.svg" width="160" height="160" alt="Моноподы для 
+                            селфи">
+              </div>
+            </a>
+            <h3 class="categories--list-item__title">
+              <a href="catalog.html">Моноподы
+                <br>для селфи</a>
+            </h3>
+          </li>
+          <li class="categories--list-item">
+            <a href="catalog/camera.html">
+              <div class="categories--list-item__img">
+                <img class="popular-img" src="img/svg/popular-3.svg" width="160" height="160" alt="Экшн-камеры">
+              </div>
+            </a>
+            <h3 class="categories--list-item__title">
+              <a href="catalog/camera.html">Экшн-камеры</a>
+            </h3>
+          </li>
+          <li class="categories--list-item">
+            <a href="catalog/fitness.html">
+              <div class="categories--list-item__img">
+                <img class="popular-img" src="img/svg/popular-4.svg" width="160" height="160" alt="Фитнес-браслеты">
+              </div>
+            </a>
+            <h3 class="categories--list-item__title">
+              <a href="catalog.html">Фитнес-браслеты</a>
+            </h3>
+          </li>
+          <li class="categories--list-item">
+            <a href="catalog/watch.html">
+              <div class="categories--list-item__img">
+                <img class="popular-img" src="img/svg/popular-5.svg" width="160" height="160" alt="Умные часы">
+              </div>
+            </a>
+            <h3 class="categories--list-item__title">
+              <a href="catalog.html">Умные часы </a>
+            </h3>
+          </li>
+          <li class="categories--list-item">
+            <a href="catalog/quadro.html">
+              <div class="categories--list-item__img">
+                <img class="popular-img" src="img/svg/popular-6.svg" width="160" height="160" alt="Квадрокоптеры">
+              </div>
+            </a>
+            <h3 class="categories--list-item__title">
+              <a href="catalog.html">Квадрокоптеры</a>
+            </h3>
+          </li>
         </ul>
       </section>
 
