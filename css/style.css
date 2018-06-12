@@ -62,8 +62,8 @@ textarea[placeholder] {
 
 .main-logo {
   position: absolute;
-  top: 32px;
-  left: 200px;
+  top: -17px;
+  left: 56px;
 }
 
 .main-navigation--user,
@@ -98,6 +98,7 @@ textarea[placeholder] {
   position: absolute;
   display: flex;
   top: 150px;
+  display: none;
 }
 
 .dropdown-catalog li {
@@ -119,3 +120,83 @@ input[type="radio"].visually-hidden {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+/* BIG SLIDER */
+
+.slider-slides {
+  list-style: none;
+}
+
+.slider-slide {
+  position: relative;
+  background-color: transparent;
+  width: auto;
+  display: flex;
+  min-height: 600px;
+}
+
+.slide-info {
+ padding-left: 600px;
+}
+
+.slider-img {
+  position: absolute;
+  top: -30px;
+  left: 30px;
+}
+
+.slider-header {
+  font-size: 47px;
+  line-height: 56px;
+  padding-right: 85px;
+}
+
+.slider-text {
+  padding-right: 45px;
+}
+
+.slider-table--first-line {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 48px;
+}
+
+.slider-table--second-line {
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.slider-table--first-line td,
+.slider-table--second-line td {
+  padding-right: 80px;
+  width: auto;
+}
+
+/* categories */
+
+.categories--list {
+  display: flex;
+  list-style: none;
+}
+
+.categories--list-item {
+  position: relative;
+}
+
+.categories--list-item::before {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  background-color: #f7e296;
+  background-image: url("./img/SVG/popular-1.svg");
+  background-position: center;
+}
+
+/* Фильтры */
+
+input[type="radio"]:focus	+label::before,
+input[type="checkbox"]:focus	+label::before {
+outline: 2px solid #1e90ff;
+}
+
