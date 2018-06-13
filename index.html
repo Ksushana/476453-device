@@ -34,7 +34,7 @@
           </li>
         </ul>
         <ul class="main-navigation--site">
-          <li class="main-navigation--site__catalog">
+          <li class="main-navigation--site__item main-navigation--site__catalog">
             <a class="inner-link inner-link-main" href="./catalog.html"><span>Каталог товаров</span></a>
             <div class="dropdown-catalog dropdown">
               <ul>
@@ -51,9 +51,9 @@
               </ul>
             </div>
            </li>
-          <li class="main-navigation--site__delivery"><a href="delovery.html">Доставка</a></li>
-          <li class="main-navigation--site__warrenty"><a href="warrenty.html">Гарантия</a></li>
-          <li class="main-navigation--site__contacts"><a href="contacts.html">Контакты</a></li>
+          <li class="main-navigation--site__item main-navigation--site__delivery"><a href="delovery.html">Доставка</a></li>
+          <li class="main-navigation--site__item main-navigation--site__warrenty"><a href="warrenty.html">Гарантия</a></li>
+          <li class="main-navigation--site__item main-navigation--site__contacts"><a href="contacts.html">Контакты</a></li>
         </ul>
       </nav>
     </header>
@@ -62,19 +62,27 @@
       <h1 class="visually-hidden">Магазин Divice</h1>
       <section class="main-slider">
         <div class="slider">
+          <input class="visually-hidden slider-1-input" id="ms-btn-1" type="radio" name="toggle" checked>
+          <input class="visually-hidden slider-2-input" id="ms-btn-2" type="radio" name="toggle">
+          <input class="visually-hidden slider-3-input" id="ms-btn-3" type="radio" name="toggle">
           <div class="slider-controls">
-            <label for="btn-1" class="slider-control"></label>
-            <label for="btn-2" class="slider-control"></label>
-            <label for="btn-3" class="slider-control"></label>
+            <label for="ms-btn-1" class="slider-control"></label>
+            <label for="ms-btn-2" class="slider-control"></label>
+            <label for="ms-btn-3" class="slider-control"></label>
           </div>
           <ul class="slider-slides">
             <li class="slider-slide">
-              <img class="slider-img" src="./img/big-slider-1.png" alt="Самая длинная палка для селфи" height="486" height="384">
+              <div class="slider-img slider-img-1">
+                <a href="catalog.html">
+                  <img src="./img/big-slider-1.png" alt="Самая длинная палка для селфи" height="486" height="384">
+                </a>
+              </div>
               <div class="slide-info">
+                <span class="slide-number">01</span>
                 <h2 class="slider-header">Делай селфи, как Бен Стиллер!</h2>
                 <p class="slider-text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
                 <a href="#" class="item-opening-button">Подробнее</a>
-                <table>
+                <table class="slider-table">
                   <tr class="slider-table--first-line">
                    <td>8,5 м</td>
                    <td>5 кг</td>
@@ -88,13 +96,18 @@
                 </table>
               </div>
             </li>
-            <li class="slider-slide">
-              <img class="slider-img" src="./img/big-slider-2.png" alt="Мотивирующие фитнес-браслеты" height="485" height="345">
+            <li class="slider-slide visually-hidden">
+              <div class="slider-img slider-img-2">
+                <a href="catalog.html">
+                  <img src="./img/big-slider-2.png" alt="Мотивирующие фитнес-браслеты" height="485" height="345">
+                </a>
+              </div>
               <div class="slide-info">
+                <span class="slide-number">02</span>
                 <h2 class="slider-header">Худеем правильно!</h2>
                 <p class="slider-text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
                 <a href="#" class="item-opening-button">Подробнее</a>
-                <table>
+                <table class="slider-table">
                   <tr class="slider-table--first-line">
                    <td>48 часов</td>
                  </tr>
@@ -104,13 +117,18 @@
                 </table>
               </div>
             </li>
-            <li class="slider-slide">
-              <img class="slider-img" src="./img/big-slider-3.png" alt="квадрокоптер" width="526" height="334">
+            <li class="slider-slide visually-hidden">
+              <div class="slider-img slider-img-3">
+                <a href="catalog.html">
+                  <img src="./img/big-slider-3.png" alt="квадрокоптер" width="526" height="334">
+                </a>
+              </div>
               <div class="slide-info">
+                <span class="slide-number">03</span>
                 <h2 class="slider-header">Порхает как бабочка, жалит как пчела!</h2>
                 <p class="slider-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
                 <a href="#" class="item-opening-button">Подробнее</a>
-                <table>
+                <table class="slider-table">
                   <tr class="slider-table--first-line">
                    <td>800 м</td>
                    <td>50 м</td>
@@ -193,25 +211,30 @@
       </section>
 
       <section class="services">
-        <div class="small-slider-controls">
-          <label for="btn-1" class="small-slider-control">Доставка</label>
-          <label for="btn-2" class="small-slider-control">Гарантия</label>
-          <label for="btn-3" class="small-slider-control">Кредит</label>
+        <div class="small-slider-wrapper">
+          <input class="visually-hidden slider-services-1" type="radio" name="toggle-2" id="ss-btn-1" checked>
+          <input class="visually-hidden slider-services-2" type="radio" name="toggle-2" id="ss-btn-2">
+          <input class="visually-hidden slider-services-3" type="radio" name="toggle-2" id="ss-btn-3">
+          <div class="small-slider-controls">
+            <label for="ss-btn-1" class="small-slider-control">Доставка</label>
+            <label for="ss-btn-2" class="small-slider-control">Гарантия</label>
+            <label for="ss-btn-3" class="small-slider-control">Кредит</label>
+          </div>
+          <ul class="services--slider">
+            <li>
+              <h2>Доставка</h2>
+              <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж</p>
+            </li>
+            <li>
+              <h2>Гарантия</h2>
+              <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+            </li>
+            <li>
+              <h2>Кредит</h2>
+              <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+            </li>
+          </ul>
         </div>
-        <ul class="services--slider">
-          <li>
-            <h2>Доставка</h2>
-            <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж</p>
-          </li>
-          <li>
-            <h2>Гарантия</h2>
-            <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
-          </li>
-          <li>
-            <h2>Кредит</h2>
-            <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
-          </li>
-        </ul>
       </section>
 
       <section class="brands">
@@ -239,7 +262,7 @@
         </ul>
       </section>
 
-      <section>
+      <section class="about-us">
         <h2>О нас</h2>
         <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
         <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
@@ -251,7 +274,7 @@
         <a href="#">Подробнее о нас</a>
       </section>
 
-      <section>
+      <section class="contacts">
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
         <span class="map"></span>
