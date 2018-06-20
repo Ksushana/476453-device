@@ -100,7 +100,7 @@
           <h2>Фильтр:</h2>
           <form class="filter" action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="sort-price">
-              <legend>Стоимость</legend>
+              <legend class="filter-header">Стоимость</legend>
               <div class="range-block">
                 <div class="range-line-block filter-input">
                   <div class="range-line"></div>
@@ -111,8 +111,8 @@
             </fieldset>
 
             <fieldset class="color">
-              <legend>Цвет</legend>
-              <div  class="filter-input">
+              <legend class="filter-header">Цвет</legend>
+              <div  class="color-inputs filter-input">
                 <p class="color-type">
                   <input  class="visually-hidden" type="checkbox" name="color" id="black" checked>
                   <label for="black">Черный</label>
@@ -136,27 +136,27 @@
               </div>
             </fieldset>
 
-            <fieldset class="Bluetooth">
-              <legend>Bluetooth</legend>
-              <div  class="filter-input filter-input">
-                <p class="bluetooth-yes">
+            <fieldset class="bluetooth">
+              <legend class="filter-header">Bluetooth</legend>
+              <div  class="filter-input">
+                <p class="bluetooth-radio">
                   <input class="visually-hidden" type="radio" name="bluetooth" value="yes" id="bluetooth-yes" checked>
                   <label for="bluetooth-yes">Есть</label>
                 </p>
-                <p class="bluetooth-no">
+                <p class="bluetooth-radio">
                   <input class="visually-hidden" type="radio" name="bluetooth" value="no" id="bluetooth-no">
                   <label for="bluetooth-no">Нет</label>
                 </p>
               </div>
             </fieldset>
-            <button type="submit" class="filter-button button">Показать</button>
+            <button type="submit" class="filter-button button button-decoration">Показать</button>
           </form>
         </section>
         
         <div class="small-catalog-container">
           <div class="sorting">
             <h2>Сортировка:</h2>
-            <ul>
+            <ul class="sorting-ways">
               <li>По цене</li>
               <li>По типу</li>
               <li>По популярности</li>
@@ -168,28 +168,28 @@
           <section class="items">
             <ul>
               <li>
-                <a href="#">
+                <a href="#"  class="item">
                   <h3>Любительская селфи-палка</h3>
                   <img src="./img/catalog-item-1.jpg" alt="Любительская селфи-палка" width="360" height="380">
                   <span>500 руб.</span>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="#" class="item">
                   <h3>Профессиональная селфи-палка</h3>
                   <img src="./img/catalog-item-2.jpg" alt="Профессиональная селфи-палка" width="360" height="380">
                   <span>1 500 руб.</span>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="#" class="item">
                   <h3>Непотопляемая  селфи-палка</h3>
                   <img src="./img/catalog-item-3.jpg" alt="Непотопляемая  селфи-палка" width="360" height="380">
                   <span>2 500 руб.</span>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="#" class="item">
                   <h3>Селфи-палка «Следуй за мной»</h3>
                   <img src="./img/catalog-item-4.jpg" alt="Селфи-палка «Следуй за мной»" width="360" height="380">
                   <span>4 900 руб.</span>
