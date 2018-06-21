@@ -103,6 +103,7 @@ textarea[placeholder] {
   text-transform: uppercase;
   background-color: transparent;
   text-align: center;
+  z-index: 1;
 }
 
 .button-decoration::before {
@@ -383,9 +384,10 @@ position: relative;
 }
 
 .slider-text {
-  padding-right: 50px;
+  padding-right: 70px;
   padding-bottom: 37px;
   padding-top: 3px;
+  letter-spacing: 0.1px;
 }
 
 .slide-info--2 .slider-text {
@@ -644,6 +646,8 @@ position: relative;
 
 .about-us p {
   margin-bottom: 30px;
+  letter-spacing: 0.1px;
+  padding-right: 10px;
 }
 
 .delivery-componies {
@@ -1012,7 +1016,7 @@ outline: 2px solid #1e90ff;
 }
 
 .filters {
-  width: 590px;
+  width: 610px;
   padding-left: 60px;;
 }
 
@@ -1196,15 +1200,12 @@ outline: 2px solid #1e90ff;
 
 .filter-button {
   width: 200px;
-      letter-spacing: 3.5px;
-      border: none;
-      margin-left: 40px;
-      margin-top: 38px;
-      padding: 0;
-      z-index: 5;;
+  letter-spacing: 3.5px;
+  border: none;
+  margin-top: 38px;
+  padding: 0;
+  z-index: 5;
 }
-
-
 
 /* main catalog part */
 
@@ -1216,7 +1217,7 @@ outline: 2px solid #1e90ff;
   background-image: linear-gradient(to right, #dcdcdc 0%, #dcdcdc 32.5%, #eeeeee 32.5%, #eeeeee 100%), linear-gradient(to right, #eeeeee 0%, #eeeeee 32.5%, #ffffff 32.5%, #ffffff 100%);
   background-size: 100% 70px, 100% 100%;
   background-repeat: no-repeat;
-   width: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
@@ -1232,7 +1233,7 @@ outline: 2px solid #1e90ff;
 }
 
 .small-catalog-container {
-  padding-left: 60px;
+  padding-left: 63px;
 }
 
 .sorting {
@@ -1240,23 +1241,73 @@ outline: 2px solid #1e90ff;
 }
 
 .sorting-ways {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
   display: flex;
   list-style: none;
+  padding-left: 48px;
+  padding-top: 13px;
 }
+
+.sorting-ways li {
+  padding-right: 27px;
+}
+
+.sort-dir {
+  position: relative;
+  list-style: none;
+  display: flex;
+  margin-left: auto;
+}
+
+.sort-dir-up,
+.sort-dir-down {
+  position: absolute;
+  width: 11px;
+  height: 10px;
+  top: 15px;
+}
+
+.sort-dir-up {
+  left: 0px;
+  background-image: url("../img/SVG/sort-arrow.svg");
+  background-repeat: no-repeat;
+  opacity: 0.6;
+}
+
+.sort-dir-down {
+  left: 30px;
+  background-image: url("../img/SVG/sort-arrow.svg");
+  background-repeat: no-repeat;
+  transform: rotate(180deg);
+  opacity: 1;
+}
+
 
 .items {
-  padding-top: 55px;
-  padding-left: 10px;
+  padding-top: 40px;
 }
 
-.items ul {
+.item h3 {
+  font-family: "Gilroy Extra Bold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  padding-left: 3px;
+}
+
+
+.items-list {
+  padding-left: 0px;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   padding-left: 0px;
+  margin-bottom: 0px;
 }
 
-.items li:nth-child(odd) {
+.item:nth-child(odd) {
   margin-right: 40px;
 }
 
@@ -1264,7 +1315,93 @@ outline: 2px solid #1e90ff;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  margin-top: 15px;
 }
-.item img {
-  order: -1;
+
+.img-hover-mask {
+  position: relative;
+}
+
+.mask-basket-compare {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 360px;
+  height: 380px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding-top: 185px;
+  display: none;
+}
+
+.item:hover .mask-basket-compare {
+  display: block;
+}
+
+.basket-button {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.compare-button {
+  font-size: 13px;
+  line-height: 36px;
+  width: 145px;
+  margin: 0 auto;
+}
+
+.item-description {
+  display: flex;
+  margin-top: 12px;
+  margin-bottom: 15px;
+}
+
+.catalog-item-price {
+  font-family: "Gilroy Light", "Arial", sans-serif; 
+  margin-left: auto;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  margin-top: 20px;
+}
+
+
+/* ПАГИНАЦИЯ */
+
+.pagination-list {
+  font-family: "Gilroy Extra Bold", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: #ebebeb;
+  height: 70px;
+  margin-top: 0px;
+  margin-bottom: 80px;
+  list-style: none;
+  display: flex;
+  padding-top: 4px;
+  padding-left: 31px;
+  padding-right: 25px;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 3.7px;
+}
+
+.pagination-item {
+  margin: 0px;
+  padding-right: 26px;
+  opacity: 0.3;
+}
+.pagination-item:last-child {
+  padding-right: 0px;
+}
+
+.prev {
+  margin-right: auto;
+}
+
+.next {
+  margin-left: auto;
+}
+
+.pagination-current {
+  opacity: 1;
 }
