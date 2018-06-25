@@ -14,25 +14,25 @@
         <img alt="логотип Device" class="main-logo--img header-item" src="./img/logo.png" width="164" height="36">
       </a>
       <nav class="main-navigation">
-        <ul class="main-navigation--user">
-          <li>
-            <div class="site-search-block">
-              <form action="https://echo.htmlacademy.ru" method="get">
-                <input class="input-block search-input" type="search" name="search" placeholder="Поиск по сайту">
-                <button type="submit" class="visually-hidden">Найти</button>
-              </form>
-            </div>
-          </li>
-          <li class="main-navigation--user__enter main-navigation--user__item menu-item">
-            <a class="entrance" href="#">Войти</a>
-          </li>
-          <li class="main-navigation--user__compare main-navigation--user__item menu-item">
-            <a class="compare" href="#">Сравнить</a>
-          </li>
-          <li class="main-navigation--user__basket main-navigation--user__item menu-item">
-            <a class="basket" href="#">Корзина</a>
-          </li>
-        </ul>
+        <div class="main-navigation--user">
+          <form action="https://echo.htmlacademy.ru" method="get" class="site-search-form site-search-block">
+            <input class="input-block search-input" type="search" name="search" placeholder="Поиск по сайту">
+            <input class="submit-search-input" type="submit" class="visually-hidden" value="Найти">
+          </form>
+          <ul class="login-navigation main-navigation--user__item">
+            <li class="menu-item main-navigation--user__enter">
+              <a class="entrance" href="#">Войти</a>
+            </li>
+          </ul>
+          <ul class="shop-navigation">
+            <li class="main-navigation--user__compare main-navigation--user__item menu-item">
+              <a class="entrance" href="#">Сравнить</a>
+            </li>
+            <li class="main-navigation--user__basket main-navigation--user__item menu-item">
+              <a class="entrance" href="#">Корзина</a>
+            </li>
+          </ul>
+        </div>
         <ul class="main-navigation--site">
           <li class="main-navigation--site__item main-navigation--site__catalog">
             <a class="inner-link inner-link-main menu-item" href="./catalog.html"><span>Каталог товаров</span></a>
@@ -72,10 +72,10 @@
             <label for="ms-btn-3" class="slider-control"></label>
           </div>
           <ul class="slider-slides">
-            <li class="slider-slide">
+            <li class="slider-slide slider-1">
               <div class="slider-img slider-img-1">
                 <a href="catalog.html">
-                  <img src="./img/big-slider-1.png" alt="Самая длинная палка для селфи" height="486" height="384">
+                  <img src="./img/big-slider-1.png" alt="Самая длинная палка для селфи" height="486" width="384">
                 </a>
               </div>
               <div class="slide-info">
@@ -97,10 +97,10 @@
                 </table>
               </div>
             </li>
-            <li class="slider-slide  visually-hidden">
+            <li class="slider-slide  visually-hidden  slider-2">
               <div class="slider-img slider-img-2">
                 <a href="catalog.html">
-                  <img src="./img/big-slider-2.png" alt="Мотивирующие фитнес-браслеты" height="485" height="345">
+                  <img src="./img/big-slider-2.png" alt="Мотивирующие фитнес-браслеты" height="485" width="345">
                 </a>
               </div>
               <div class="slide-info slide-info--2">
@@ -118,7 +118,7 @@
                 </table>
               </div>
             </li>
-            <li class="slider-slide visually-hidden">
+            <li class="slider-slide visually-hidden slider-3">
               <div class="slider-img slider-img-3">
                 <a href="catalog.html">
                   <img src="./img/big-slider-3.png" alt="квадрокоптер" width="526" height="334">
@@ -142,6 +142,7 @@
               </div>
             </li>
           </ul>
+          </div>
       </section>
 
       <section class="categories">
@@ -282,7 +283,7 @@
         <section class="contacts">
           <h2 class="section-header">Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-          <img class="map">
+          <img  src="./img/map.jpg" class="map" width="559" height="222" alt="как до нас добраться">
           <a href="#" class="contacts--button button-decoration">Напишите нам</a>
         </section>
       </div>
@@ -290,49 +291,63 @@
     </main>
 
     <footer class="main-footer">
-      <div class="footer-wrapper centered">
-      <div class="navigation__footer">
-        <a class="footer-logo logo">
-          <img alt="логотип Device" class="main-logo--img" src="./img/logo-footer.png" width="164" height="36">
-        </a>
-        
-        <ul class="user-navigation--footer">
-          <li>
-            <a class="entrance" href="#">Войти</a>
-          </li>
-          <li>
-            <a class="entrance" href="#">Сравнить</a>
-          </li>
-          <li>
-            <a class="entrance" href="#">Корзина</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="faq">
-        <p class="address">г. Москва, ул. Строителей, 15</p>
-        <ul class="faq-list">
-          <li><a class="faq-list-link menu-item" href="delovery.html">Доставка</a></li>
-          <li><a class="faq-list-link menu-item" href="warrenty.html">Гарантия</a></li>
-          <li><a class="faq-list-link menu-item" href="contacts.html">Контакты</a></li>
-        </ul>
-        <div class="telephone">
-          <span>Тел.: </span>
-          <a class="phone-number" href="tel:+7 (495) 495-95-95">+7 (495) 495-95-95</a>
+      <div class="footer-wrapper">
+        <div class="navigation__footer">
+          <a class="footer-logo">
+            <img alt="логотип Device" class="main-logo--img" src="./img/logo-footer.png" width="164" height="36">
+          </a>
+    
+          <ul class="user-navigation--footer">
+            <li class="footer-navigation--user__enter">
+              <a class="entrance" href="#">Войти</a>
+            </li>
+            <li class="footer-navigation--user__compare">
+              <a class="compare" href="#">Сравнить</a>
+            </li>
+            <li class="footer-navigation--user__basket">
+              <a class="basket" href="#">Корзина</a>
+            </li>
+          </ul>
         </div>
-      </div>
-
-      <div class="social">
-        <ul class="social-buttons">
-          <li><a class="social-button social-button__facebook" href="#">Фейсбук</a></li>
-          <li><a class="social-button social-button__instagram" href="#">Инстаграм</a></li>
-          <li><a class="social-button social-button__twitter" href="#">Твиттер</a></li>
-        </ul>
-
-        <p class="footer-copyright visually-hidden">
-          <a class="button menu-item" href="https://htmlacademy.ru">HTML Academy</a>
-        </p>
-      </div>
+    
+        <div class="faq">
+          <p class="address">г. Москва, ул. Строителей, 15</p>
+          <ul class="faq-list">
+            <li>
+              <a class="faq-list-link" href="delovery.html">Доставка</a>
+            </li>
+            <li>
+              <a class="faq-list-link" href="warrenty.html">Гарантия</a>
+            </li>
+            <li>
+              <a class="faq-list-link" href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+          <div class="telephone">
+            <span>Тел.: </span>
+            <a class="phone-number" href="tel:+7 (495) 495-95-95">+7 (495) 495-95-95</a>
+          </div>
+        </div>
+    
+        <div class="social">
+          <ul class="social-buttons">
+            <li>
+              <a class="social-button social-button__facebook" href="#">Фейсбук</a>
+            </li>
+            <li>
+              <a class="social-button social-button__instagram" href="#">Инстаграм</a>
+            </li>
+            <li>
+              <a class="social-button social-button__twitter" href="#">Твиттер</a>
+            </li>
+          </ul>
+    
+          <p class="footer-copyright">
+            <a class="button academy-copyright" href="https://htmlacademy.ru/intensive/htmlcss">
+              <span class="visually-hidden">HTML Academy</span>
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
 
@@ -341,15 +356,15 @@
       <form class="pop-up__form" action="index.html" method="post">
         <p>
           <label for="name" class="pop-up--label">Ваше имя:</label>
-          <input  class="pop-up--input" id="name" type="text" name="name" placeholder="Имя Фамилия" class="input-block">
+          <input  class="pop-up--input input-block" id="name" type="text" name="name" placeholder="Имя Фамилия">
         </p>
         <p>
           <label for="e-mail" class="pop-up--label">Ваш e-mail:</label>
-          <input  class="pop-up--input" id="e-mail" type="text" name="e-mail" placeholder="email@example.com" class="input-block">
+          <input  class="pop-up--input input-block" id="e-mail" type="text" name="e-mail" placeholder="email@example.com">
         </p>
         <p>
           <label for="text" class="pop-up--label">Текст письма:</label>
-          <textarea id="text" type="text" name="name" placeholder="В свободной форме" class="input-block"></textarea>
+          <textarea id="text" name="name" placeholder="В свободной форме" class="input-block"></textarea>
         </p>
         <button class="button button-decoration button--pop-up" type="submit">Отправить</button>
       </form>
@@ -359,7 +374,7 @@
     <section class="pop-up pop-up--map visually-hidden">
       <h3 class="visually-hidden">Как до нас добраться</h3>
       <div class="map-background">
-         <img src="" alt="" width="" height="" class="visually-hidden">
+         <img src="../device/img/map-big.jpg" alt="как добраться до нас" width="960" height="559" class="visually-hidden">
       </div>
       <iframe src="" width="960" height="559"></iframe>
     </section>

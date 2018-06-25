@@ -13,32 +13,28 @@
         <img alt="логотип Device" class="main-logo--img" src="./img/logo.png" width="164" height="36">
       </a>
       <nav class="main-navigation">
-        <ul class="main-navigation--user">
-          <li>
-            <div class="site-search-block">
-              <form action="https://echo.htmlacademy.ru" method="get">
-                <input class="input-block search-input" type="search" name="search" placeholder="Поиск по сайту">
-                <button type="submit" class="visually-hidden">Найти</button>
-              </form>
-            </div>
-          </li>
-          <li class="main-navigation--user__login main-navigation--user__item">
-            <ul class="login-navigation">
-              <li class="menu-item">
-                <a class="login-link" href="profile.html">Валентин Петухов</a>
-              </li>
-              <li class="login-link-off menu-item">
-                <a href="profile.html">Выйти</a>
-              </li>
-            </ul>
-          </li>
-          <li class="main-navigation--user__compare main-navigation--user__item menu-item">
-            <a class="entrance" href="#">Сравнить</a>
-          </li>
-          <li class="main-navigation--user__basket main-navigation--user__item menu-item">
-            <a class="entrance" href="#">Корзина</a>
-          </li>
-        </ul>
+        <div class="main-navigation--user">
+          <form action="https://echo.htmlacademy.ru" method="get" class="site-search-form site-search-block">
+            <input class="input-block search-input" type="search" name="search" placeholder="Поиск по сайту">
+            <input class="submit-search-input" type="submit" class="visually-hidden" value="Найти">
+          </form>
+          <ul class="login-navigation main-navigation--user__login main-navigation--user__item">
+            <li class="menu-item">
+              <a class="login-link" href="profile.html">Валентин Петухов</a>
+            </li>
+            <li class="login-link-off menu-item">
+              <a href="profile.html">Выйти</a>
+            </li>
+          </ul>
+          <ul class="shop-navigation">
+            <li class="main-navigation--user__compare main-navigation--user__item menu-item">
+              <a class="entrance" href="#">Сравнить</a>
+            </li>
+            <li class="main-navigation--user__basket main-navigation--user__item menu-item">
+              <a class="entrance" href="#">Корзина</a>
+            </li>
+          </ul>
+        </div>
       <ul class="main-navigation--site">
         <li class="main-navigation--site__item main-navigation--site__catalog">
           <a class="inner-link inner-link-main menu-item" href="./catalog.html">
@@ -137,7 +133,7 @@
             </fieldset>
 
             <fieldset class="bluetooth">
-              <legend class="filter-header">Bluetooth</legend>
+              <legend class="filter-header bluetooth-header">Bluetooth</legend>
               <div  class="filter-input">
                 <p class="bluetooth-radio">
                   <input class="visually-hidden" type="radio" name="bluetooth" value="yes" id="bluetooth-yes" checked>
@@ -273,25 +269,25 @@
     <footer class="main-footer">
       <div class="footer-wrapper">
         <div class="navigation__footer">
-          <a class="footer-logo">
+          <a class="footer-logo"  href="index.html">
             <img alt="логотип Device" class="main-logo--img" src="./img/logo-footer.png" width="164" height="36">
           </a>
     
           <ul class="user-navigation--footer">
-            <li>
+            <li class="footer-navigation--user__enter">
               <a class="entrance" href="#">Войти</a>
             </li>
-            <li>
-              <a class="entrance" href="#">Сравнить</a>
+            <li class="footer-navigation--user__compare">
+              <a class="compare" href="#">Сравнить</a>
             </li>
-            <li>
-              <a class="entrance" href="#">Корзина</a>
+            <li class="footer-navigation--user__basket">
+              <a class="basket" href="#">Корзина</a>
             </li>
           </ul>
         </div>
     
         <div class="faq">
-          <p class="address">. Москва, ул. Строителей, 15</p>
+          <p class="address">г. Москва, ул. Строителей, 15</p>
           <ul class="faq-list">
             <li>
               <a class="faq-list-link" href="delovery.html">Доставка</a>
@@ -322,8 +318,8 @@
             </li>
           </ul>
     
-          <p class="footer-copyright visually-hidden">
-            <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
+          <p class="footer-copyright">
+            <a class="button academy-copyright" href="https://htmlacademy.ru/intensive/htmlcss"><span class="visually-hidden">HTML Academy</span></a>
           </p>
         </div>
       </div>
