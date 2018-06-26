@@ -13,7 +13,7 @@
         <img alt="логотип Device" class="main-logo--img" src="./img/logo.png" width="164" height="36">
       </a>
       <nav class="main-navigation">
-        <div class="main-navigation--user">
+        <div class="main-navigation--user main-navigation--user__catalog">
           <form action="https://echo.htmlacademy.ru" method="get" class="site-search-form site-search-block">
             <input class="input-block search-input" type="search" name="search" placeholder="Поиск по сайту">
             <input class="submit-search-input" type="submit" class="visually-hidden" value="Найти">
@@ -118,7 +118,7 @@
                   <label for="white">Белый</label>
                 </p>
                 <p class="color-type">
-                  <input class="visually-hidden" type="checkbox" name="color" id="blue" checked>
+                  <input class="visually-hidden" type="checkbox" name="color" id="blue" disabled>
                   <label for="blue">Синий</label>
                 </p>
                 <p class="color-type">
@@ -153,18 +153,18 @@
           <div class="sorting">
             <h2>Сортировка:</h2>
             <ul class="sorting-ways">
-              <li>По цене</li>
-              <li>По типу</li>
-              <li>По популярности</li>
+              <li class="selected-sorting-way">По цене</li>
+              <li class="sorting-way">По типу</li>
+              <li class="sorting-way">По популярности</li>
             </ul>
             <ul class="sort-dir">
               <li>
-                <a href="#" class="sort-dir-up">
+                <a href="#" class="sort-dir-arrow sort-dir-up">
                   <p class="visually-hidden">Вверх</p>
                 </a>
               </li>
               <li>
-                <a href="#" class="sort-dir-down">
+                <a href="#" class="sort-dir-arrow sort-dir-down sort-dir-checked">
                   <p class="visually-hidden">Вниз</p>
                 </a>
               </li>
@@ -272,11 +272,15 @@
           <a class="footer-logo"  href="index.html">
             <img alt="логотип Device" class="main-logo--img" src="./img/logo-footer.png" width="164" height="36">
           </a>
-    
           <ul class="user-navigation--footer">
             <li class="footer-navigation--user__enter">
-              <a class="entrance" href="#">Войти</a>
+              <a class="entrance" href="profile.html">Валентин Петухов</a>
             </li>
+            <li class="footer-navigation--user__logout">
+              <a href="profile.html">Выйти</a>
+            </li>
+          </ul>
+          <ul class="shop-navigation--footer user-navigation--footer">
             <li class="footer-navigation--user__compare">
               <a class="compare" href="#">Сравнить</a>
             </li>
