@@ -35,11 +35,11 @@
         </div>
         <ul class="main-navigation--site">
           <li class="main-navigation--site__item main-navigation--site__catalog">
-            <a class="inner-link inner-link-main menu-item" href="./catalog.html"><span>Каталог товаров</span></a>
+            <a class="inner-link inner-link-main menu-item" href="#"><span>Каталог товаров</span></a>
             <div class="dropdown-catalog dropdown">
               <ul>
                 <li class="dropdown-catalog-item"><a class="dropdown-catalog-link menu-item" href="virtreality.html">Виртуальная реальность</a></li>
-                <li class="dropdown-catalog-item"><a class="dropdown-catalog-link menu-item" href="monopods.html">Моноподы для селфи</a></li>
+                <li class="dropdown-catalog-item"><a class="dropdown-catalog-link menu-item" href="./catalog.html">Моноподы для селфи</a></li>
                 <li class="dropdown-catalog-item"><a class="dropdown-catalog-link menu-item" href="action.html">Экшн-камеры</a></li>
               </ul>
               <ul>
@@ -82,7 +82,7 @@
                 <span class="slide-number">01</span>
                 <h2 class="slider-header">Делай селфи,<br> как Бен Стиллер!</h2>
                 <p class="slider-text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-                <a href="#" class="item-opening-button button-decoration">Подробнее</a>
+                <a href="#" class="item-opening-button button-decoration active-button">Подробнее</a>
                 <table class="slider-table">
                   <tr class="slider-table--first-line">
                    <td class="column-1">8,5 м</td>
@@ -277,14 +277,14 @@
             <li>Автотрейдинг</li>
             <li>ЖелДорЭкспедиция</li>
           </ul>
-          <a href="#" class="about-us--button button-decoration">Подробнее о нас</a>
+          <a href="#" class="about-us--button button-decoration active-button">Подробнее о нас</a>
         </section>
 
         <section class="contacts">
           <h2 class="section-header">Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
           <img  src="./img/map.jpg" class="map" width="559" height="222" alt="как до нас добраться">
-          <a href="#" class="contacts--button button-decoration">Напишите нам</a>
+          <a href="#" class="contacts--button button-decoration active-button">Напишите нам</a>
         </section>
       </div>
       </div>
@@ -350,34 +350,41 @@
         </div>
       </div>
     </footer>
-
-    <section class="pop-up pop-up--write visually-hidden">
-      <h2 class="visually-hidden">напишите нам</h2>
-      <form class="pop-up__form" action="index.html" method="post">
-        <p>
-          <label for="name" class="pop-up--label">Ваше имя:</label>
-          <input  class="pop-up--input input-block" id="name" type="text" name="name" placeholder="Имя Фамилия">
-        </p>
-        <p>
-          <label for="e-mail" class="pop-up--label">Ваш e-mail:</label>
-          <input  class="pop-up--input input-block" id="e-mail" type="text" name="e-mail" placeholder="email@example.com">
-        </p>
-        <p>
-          <label for="text" class="pop-up--label">Текст письма:</label>
-          <textarea id="text" name="name" placeholder="В свободной форме" class="input-block"></textarea>
-        </p>
-        <button class="button button-decoration button--pop-up" type="submit">Отправить</button>
-      </form>
-      <button class="pop-up-close" type="button">закрыть</button>
-    </section>
-
-    <section class="pop-up pop-up--map visually-hidden">
-      <h3 class="visually-hidden">Как до нас добраться</h3>
-      <div class="map-background">
-         <img src="../device/img/map-big.jpg" alt="как добраться до нас" width="960" height="559" class="visually-hidden">
+    <div class="fixed-overlay overlay-write visually-hidden">
+      <div class="modal">
+        <div class="pop-up pop-up--write">
+          <h2 class="visually-hidden">напишите нам</h2>
+          <form class="pop-up__form" action="index.html" method="post">
+            <p>
+              <label for="name" class="pop-up--label">Ваше имя:</label>
+              <input class="pop-up--input input-block" id="name" type="text" name="name" placeholder="Имя Фамилия">
+            </p>
+            <p>
+              <label for="e-mail" class="pop-up--label">Ваш e-mail:</label>
+              <input class="pop-up--input input-block" id="e-mail" type="text" name="e-mail" placeholder="email@example.com">
+            </p>
+            <p>
+              <label for="text" class="pop-up--label">Текст письма:</label>
+              <textarea id="text" name="name" placeholder="В свободной форме" class="input-block"></textarea>
+            </p>
+            <button class="button button-decoration button--pop-up active-button" type="submit">Отправить</button>
+          </form>
+          <button class="pop-up-close" type="button">закрыть</button>
+        </div>
       </div>
-      <iframe src="" width="960" height="559"></iframe>
-    </section>
+    </div>
+    <div class="fixed-overlay overlay-map visually-hidden">
+      <div class="modal">
+        <div class="pop-up pop-up--map">
+          <h3 class="visually-hidden">Как до нас добраться</h3>
+          <div class="map-background">
+            <img src="../device/img/map-big.jpg" alt="как добраться до нас" width="960" height="559" class="visually-hidden">
+          </div>
+          <iframe src="" width="960" height="559"></iframe>
+          <button class="pop-up-close" type="button">закрыть</button>
+        </div>
+      </div>
+    </div>    
   </div>
   </body>
 </html>
