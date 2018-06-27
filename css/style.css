@@ -519,8 +519,12 @@ position: relative;
 
 .slider-controls {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   right: 95px;
   top: 200px;
   width: 66px;
@@ -1136,7 +1140,9 @@ outline: 2px solid #1e90ff;
     position: absolute;
     left: 50%;
     top: 25%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 
 .pop-up {
@@ -1427,6 +1433,7 @@ outline: 2px solid #1e90ff;
    height: 23px;
    background-image: url("../img/SVG/filter-range-button.svg");
    background-size: cover;
+   cursor: pointer;
  }
 
   .range-value1 {
@@ -1730,6 +1737,7 @@ outline: 2px solid #1e90ff;
 }
 
 .item {
+  position: relative;
   display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1740,6 +1748,24 @@ outline: 2px solid #1e90ff;
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: 15px;
+}
+
+.new::before {
+  content: "NEW";
+  position: absolute;
+  font-family: "Gilroy Extra Bold", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  width: 60px;
+  height: 60px;
+  padding-top: 18px; 
+  color: #d7d7d7;
+  border: 2px solid #d7d7d7;
+  border-radius: 50%;
+  z-index: 2;
+  text-align: center;
+  right: 28px;
+  top: 29px;
 }
 
 .img-hover-mask {
