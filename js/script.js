@@ -4,11 +4,12 @@ var contactsOpen = document.querySelector(".contacts--button");
 var contactsForm = document.querySelector(".overlay-write");
 var popUp = document.querySelector(".pop-up");
 var close = document.querySelector(".pop-up-close");
-var overlay = document.querySelector(".fixed-overlay");
+// var overlay = document.querySelector(".fixed-overlay");
+
+var form = contactsForm.querySelector(".pop-up__form");
 var name = contactsForm.querySelector("[name=user-name]");
 var email = contactsForm.querySelector("[name=e-mail]");
 // var text = contactsForm.querySelector("[name=text-field]")
-var form = contactsForm.querySelector(".pop-up__form");
 
 var isStorageSupport = true;
 var storage = "";
@@ -52,9 +53,9 @@ form.addEventListener("submit", function (evt) {
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === ESC) {
-      if (popUp.classList.contains("modal-show")) {
+      if (contactsForm.classList.contains("modal-show")) {
         evt.preventDefault();
-        popUp.classList.remove("modal-show");
+        contactsForm.classList.remove("modal-show");
         contactsForm.classList.remove("modal-error");
       }
   }
