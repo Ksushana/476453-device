@@ -624,7 +624,7 @@ input[type="radio"].visually-hidden {
 	margin-top: 34px;
 	line-height: 24px;
 	font-size: 18px;
-	/* letter-spacing: 0.7px; */
+	width: 160px;
 }
 
 
@@ -1859,6 +1859,8 @@ input[type="checkbox"]:focus+label::before {
 	display: flex;
 	margin-top: 12px;
 	margin-bottom: 15px;
+	width: 360px;
+
 }
 
 .catalog-item-price {
