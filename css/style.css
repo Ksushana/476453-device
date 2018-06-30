@@ -1098,15 +1098,6 @@ input[type="radio"].visually-hidden {
 
 .social-button {
 	width: 54px;
-	opacity: 0.3;
-}
-
-.social-button:hover {
-	opacity: 1;
-}
-
-.social-button:active {
-	opacity: 0.1;
 }
 
 .social-button::before {
@@ -1114,6 +1105,15 @@ input[type="radio"].visually-hidden {
 	position: absolute;
 	width: 32px;
 	height: 32px;
+	opacity: 0.3;
+}
+
+.social-button:hover::before {
+	opacity: 1;
+}
+
+.social-button:active::before {
+	opacity: 0.1;
 }
 
 .social-button__facebook::before {
