@@ -69,6 +69,10 @@ textarea {
 	font-family: inherit;
 }
 
+textarea {
+	resize: none;
+}
+
 input[placeholder],
 textarea[placeholder] {
 	font-family: inherit;
@@ -422,6 +426,17 @@ input[type="radio"].visually-hidden {
 	display: flex;
 }
 
+
+/* .hide-slide {
+	display: none;
+} */
+
+.show-slide {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
 .slide-info {
 	position: relative;
 	padding-left: 560px;
@@ -476,6 +491,7 @@ input[type="radio"].visually-hidden {
 	margin-top: 37px;
 	z-index: 30;
 	letter-spacing: 0.5px;
+	z-index: 100;
 }
 
 .slide-info--2 .slider-header {
@@ -492,7 +508,7 @@ input[type="radio"].visually-hidden {
 	color: #ffffff;
 	top: -55px;
 	right: 45px;
-	/* z-index: -20; */
+	z-index: -20;
 }
 
 .slider-text {
@@ -1274,11 +1290,6 @@ input[type="checkbox"]:focus+label::before {
 .pop-up--input:focus[placeholder],
 .pop-up__form textarea:focus[placeholder] {
 	color: #000000;
-	/* font-weight: 700; */
-}
-
-.pop-up--input:invalid {
-	background-color: #edb5b5;
 }
 
 .pop-up-close {
@@ -1303,8 +1314,8 @@ input[type="checkbox"]:focus+label::before {
 	opacity: 0.3;
 }
 
-.pop-up__error {
-	background-color: #f6dada;
+.input-error {
+	background-color: #edb5b5;
 }
 
 
@@ -1860,7 +1871,6 @@ input[type="checkbox"]:focus+label::before {
 	margin-top: 12px;
 	margin-bottom: 15px;
 	width: 360px;
-
 }
 
 .catalog-item-price {
