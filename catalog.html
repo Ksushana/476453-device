@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/min.style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -18,7 +18,7 @@
         <div class="main-navigation--user main-navigation--user__catalog">
           <form action="https://echo.htmlacademy.ru" method="get" class="site-search-form site-search-block">
             <input class="input-block search-input" type="search" name="search" placeholder="Поиск по сайту">
-            <button class="submit-search-input visually-hidden" type="submit">Найти</button>
+            <button class="submit-search-input" type="submit">Найти</button>
           </form>
           <ul class="login-navigation main-navigation--user__login main-navigation--user__item">
             <li class="menu-item">
@@ -91,8 +91,8 @@
           <li>
             <a href="#" class="catalog-link">Каталог товаров</a>
           </li>
-          <li class="breadcrumbs-current">
-            <a>Моноподы для селфи</a>
+          <li>
+            <a class="breadcrumbs-current">Моноподы для селфи</a>
           </li>
         </ul>
       </div>
@@ -107,8 +107,8 @@
                   <div class="range-line-block filter-input">
                     <div class="range-line"></div>
                   </div>
-                  <div class="range-value1"></div>
-                  <div class="range-value2"></div>
+                  <div class="range-value1" tabindex="0"></div>
+                  <div class="range-value2" tabindex="0"></div>
                 </div>
               </fieldset>
               <fieldset class="color">
@@ -156,19 +156,19 @@
             <div class="sorting">
               <h2>Сортировка:</h2>
               <ul class="sorting-ways">
-                <li class="selected-sorting-way">По цене</li>
-                <li class="sorting-way">По типу</li>
-                <li class="sorting-way">По популярности</li>
+                <li class="selected-sorting-way" tabindex="0">По цене</li>
+                <li class="sorting-way" tabindex="0">По типу</li>
+                <li class="sorting-way" tabindex="0">По популярности</li>
               </ul>
               <ul class="sort-dir">
                 <li>
                   <a href="#" class="sort-dir-arrow sort-dir-up">
-                    <p class="visually-hidden">Вверх</p>
+                    <p class="visually-hidden">Сортировать по возрастанию</p>
                   </a>
                 </li>
                 <li>
                   <a href="#" class="sort-dir-arrow sort-dir-down sort-dir-checked">
-                    <p class="visually-hidden">Вниз</p>
+                    <p class="visually-hidden">Сортировать по убыванию</p>
                   </a>
                 </li>
               </ul>
@@ -208,8 +208,7 @@
                   </div>
                   <div class="item-description">
                     <h3 class="">
-                      <a href="#">Профессиональная
-                        <br>селфи-палка</a>
+                      <a href="#">Профессиональная селфи-палка</a>
                     </h3>
                     <span class="catalog-item-price">1 500 руб.</span>
                   </div>
@@ -247,8 +246,7 @@
                   </div>
                   <div class="item-description">
                     <h3 class="">
-                      <a href="#">Селфи-палка «Следуй за
-                        <br>мной»</a>
+                      <a href="#">Селфи-палка «Следуй за мной»</a>
                     </h3>
                     <span class="catalog-item-price">4 900 руб.</span>
                   </div>
@@ -258,13 +256,13 @@
                 <li class="pagination-item prev disabled">
                   <a>Назад</a>
                 </li>
-                <li class="pagination-item pagination-current">
+                <li class="pagination-item pagination-current pagination-number">
                   <a>1</a>
                 </li>
-                <li class="pagination-item">
+                <li class="pagination-item pagination-number">
                   <a href="#2">2</a>
                 </li>
-                <li class="pagination-item">
+                <li class="pagination-item pagination-number">
                   <a href="#3">3</a>
                 </li>
                 <li class="pagination-item next">
@@ -279,7 +277,7 @@
     <footer class="main-footer">
       <div class="footer-wrapper">
         <div class="navigation__footer">
-          <a class="footer-logo" href="index.html">
+          <a class="footer-logo footer-logo__state" href="index.html">
             <img alt="логотип Device" class="main-logo--img" src="./img/logo-footer.png" width="164" height="36">
           </a>
           <ul class="user-navigation--footer">
