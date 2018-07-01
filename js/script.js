@@ -2,10 +2,9 @@ var ESC = 27;
 
 var contactsOpenButton = document.querySelector(".contacts--button");
 var contactsForm = document.querySelector(".overlay-write");
-var popUp = document.querySelector(".pop-up");
 var close = document.querySelector(".pop-up-close");
 var overlay = document.querySelector(".fixed-overlay");
-
+var popUp = document.querySelector(".pop-up");
 var form = contactsForm.querySelector(".pop-up__form");
 
 var isStorageSupport = true;
@@ -18,9 +17,29 @@ catch (err) {
   isStorageSupport = false;
 }
 
+var cleanErrors = function () {
+  var name = contactsForm.querySelector("[name=user-name]");
+  var email = contactsForm.querySelector("[name=e-mail]");
+  popUp.classList.remove("modal-error");
+  name.classList.remove("input-error");
+  email.classList.remove("input-error");
+}
+
+var showModal = function () {
+  contactsForm.classList.add("modal-show");
+  contactsForm.classList.add("modal-appear");
+  cleanErrors();
+}
+
+var closeModal = function () {
+  contactsForm.classList.remove("modal-show");
+  contactsForm.classList.remove("modal-appear");
+}
+
 contactsOpenButton.addEventListener("click", function (evt) {
   evt.preventDefault();
-  contactsForm.classList.add("modal-show");
+  showModal();
+
   var name = contactsForm.querySelector("[name=user-name]");
   var email = contactsForm.querySelector("[name=e-mail]");
 
@@ -36,26 +55,26 @@ contactsOpenButton.addEventListener("click", function (evt) {
 
 close.addEventListener("click", function (evt) {
   evt.preventDefault();
-  contactsForm.classList.remove("modal-show");
+  closeModal();
 });
 
 form.addEventListener("submit", function (evt) {
   var name = contactsForm.querySelector("[name=user-name]");
   var email = contactsForm.querySelector("[name=e-mail]");
+  cleanErrors();
 
   if (!name.value || !email.value) {
     evt.preventDefault();
-
     if (!name.value) {
-      name.classList.remove("input-error");
       contactsForm.offsetWidth = contactsForm.offsetWidth;
       name.classList.add("input-error");
+      popUp.classList.add("modal-error");
     }
 
     if (!email.value) {
-      email.classList.remove("input-error");
       contactsForm.offsetWidth = contactsForm.offsetWidth;
       email.classList.add("input-error");
+      popUp.classList.add("modal-error");
     }
 
 
@@ -71,7 +90,7 @@ window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === ESC) {
     if (contactsForm.classList.contains("modal-show")) {
       evt.preventDefault();
-      contactsForm.classList.remove("modal-show");
+      closeModal();
     }
   }
 });
@@ -79,7 +98,7 @@ window.addEventListener("keydown", function (evt) {
 
 overlay.addEventListener("click", function (evt) {
   if (evt.target === overlay) {
-    contactsForm.classList.remove("modal-show");
+    closeModal();
   }
 });
 
@@ -88,29 +107,39 @@ var map = document.querySelector(".map-open");
 var bigMap = document.querySelector(".overlay-map");
 var mapCloseButton = document.querySelector(".map-close");
 
+var showMap = function () {
+  bigMap.classList.add("modal-show");
+  bigMap.classList.add("modal-appear");
+}
+
+var closeMap = function () {
+  bigMap.classList.remove("modal-show");
+  bigMap.classList.remove("modal-appear");
+}
+
 map.addEventListener("click", function (evt) {
   evt.preventDefault();
-  bigMap.classList.add("modal-show");
+  showMap();
 });
 
 
 mapCloseButton.addEventListener("click", function (evt) {
   evt.preventDefault();
-  bigMap.classList.remove("modal-show");
+  closeMap();
 });
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === ESC) {
     if (bigMap.classList.contains("modal-show")) {
       evt.preventDefault();
-      bigMap.classList.remove("modal-show");
+      closeMap();
     }
   }
 });
 
 bigMap.addEventListener("click", function (evt) {
   if (evt.target === bigMap) {
-    bigMap.classList.remove("modal-show");
+    closeMap();
   }
 });
 
