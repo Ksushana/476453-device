@@ -770,6 +770,7 @@ input[type="radio"].visually-hidden {
 	background-image: url("../img/svg/delivery.svg");
 	left: 558px;
 	top: 11px;
+	z-index: -1;
 }
 
 .services--info__warranty::before {
@@ -917,6 +918,7 @@ input[type="radio"].visually-hidden {
 	padding-top: 64px;
 	background-color: #464646;
 	min-height: 325px;
+	padding-bottom: 35px;
 }
 
 .footer-logo {
@@ -1054,7 +1056,7 @@ input[type="radio"].visually-hidden {
 	height: 7px;
 	background-color: #ffc600;
 	left: 0;
-	top: 110px;
+	bottom: -80px;
 }
 
 .faq-list {
@@ -1122,15 +1124,22 @@ input[type="radio"].visually-hidden {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	flex-wrap: wrap;
 	position: relative;
 	font-size: 0;
 	margin: 0 auto;
-	padding-left: 25px;
+	padding-left: 10px;
 	padding-top: 50px;
+	width: 165px;
 }
 
 .social-button {
-	width: 54px;
+	width: 32px;
+	margin-bottom: 20px;
+}
+
+.social-buttons li:not(:nth-child(3n)) {
+	margin-right: 22px;
 }
 
 .social-button::before {
@@ -1444,7 +1453,7 @@ input[type="checkbox"]:focus+label::before {
 	color: rgba(0, 0, 0, 0.1);
 }
 
-.breadcrumbs a:not(.main-link)::before {
+.breadcrumbs-item:not(:first-child) a::before {
 	content: "";
 	position: absolute;
 	width: 5px;
